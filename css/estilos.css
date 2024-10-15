@@ -1,0 +1,538 @@
+html { box-sizing: border-box; }
+
+*, *:before, *:after { box-sizing: inherit; }
+
+html , body {box-sizing: border-box;}
+
+body { margin: 0; padding: 0; background-color: rgb(255, 255, 255); }
+
+/* Cabezera */
+
+div#cabecera {
+    overflow: hidden;
+    width: 100%; height: 11%; 
+    background-color: #021331 ;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    z-index: 1000; /* Para asegurar que la cabezera queda por encima*/
+ }
+img#logo { text-align: center; float: left ; margin-right: 2px;}
+
+p#titulo2 { color: #e8b238; font-size: 36px; font-family: 'Pirata One' , sans-serif ; flex: auto; }
+
+/* Brujula */
+
+#brujula {
+    position: fixed;
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+    right: 78%;
+}
+
+#brujula img {
+    vertical-align: middle;
+}
+
+#texto_brujula {
+    display: none;
+    position: absolute;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    z-index: 100;
+}
+
+#brujula:hover #texto_brujula {
+    display: block;
+}
+
+
+
+/* Fin Brujula*/
+
+/* menu_horizontal */
+
+div#menu_h {
+    overflow: auto;
+    text-align: center; }
+    
+
+ul#menu_horizontal { 
+    font-family: 'Pirata One';
+    font-size: 24px; 
+    font-weight: bold;
+    padding-right: 75px;
+     }
+
+ul#menu_horizontal li {
+    margin: 25px; 
+    list-style-type: none;
+    display: inline-block; }
+
+    
+ul#menu_horizontal li a:link, 
+ul#menu_horizontal li a:visited { 
+    text-decoration: none;
+    color: #a96012;  }
+      
+ul#menu_horizontal li a:hover { 
+    color: #e8b238; }
+
+/* Fin menu_horizontal */
+
+/* Fin Cabezera */
+
+
+img#galeon { width: 100%; margin-bottom: 5%;} /* Imagen grande */
+
+/* Esferas */
+
+div#presentacion_producto {
+    margin: 20px;
+}
+
+#lista_imagenes {
+    display: flex;            
+    justify-content: center;
+    padding: 0%;
+    list-style: none;
+}
+
+#lista_imagenes li {
+    margin: 0 3%;
+}
+
+.redondo {
+    border-radius: 50%;           
+    transition: transform 1s;
+    width: 15vw;
+    height: 15vw; 
+}
+
+.redondo:hover { transform: scale(1.6); }
+
+
+/* Fin Esferas */
+
+/* Historia */
+
+#rectangulo_gris1{
+    background-color: #d7d7d7;
+    width: 100%;
+    height: 60vh;
+    margin-top: 10%;
+    position: relative;
+}
+
+#imagen_rectangulo{
+    width: 75%;
+    height: 60vh;
+}
+
+#imagen_rectangulo2{
+    width: 75%;
+    height: 60vh;
+    float: right;
+}
+
+#imagen_vertical1{
+    width: 20%;
+    height: 60vh;
+    float: right;
+}
+
+#imagen_vertical2{
+    width: 20%;
+    height: 60vh;
+    float: left;
+}
+
+#cuadrado1 {
+    background-color: #021331; 
+    width:  70vh;               
+    height: 70vh;              
+    position: absolute;        
+    right: 15vh;               
+    top: -5vh;                
+}
+
+#titulo_cuadrado1 {
+    font-size: 36px;                
+    color: #e8b238;               
+    font-family: 'Pirata One';      
+    font-weight: bold;             
+    position: absolute;             
+    left: 5vh;
+    top: 2vh;                     
+}
+
+#texto_inferior1 {
+    color: #ffffff;
+    font-size: 16px;                     
+    font-family: 'Playfair Display', serif;
+    position: absolute;      
+    top: 15vh;
+    left: 5vh;
+    width: 70%;                    
+}
+
+#mas_informacion {
+    background-color: #ae5f14; 
+    color: #edb135; 
+    font-size: 18px; 
+    font-family: 'Pirata One'; 
+    font-style: italic; 
+    border: none; 
+    border-radius: 10px; 
+    padding: 10px 20px;  
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    margin-top: 10px; 
+    bottom: 20%;
+    text-decoration: none;
+}
+
+/* Agregar un efecto al pasar el ratón */
+#mas_informacion:hover {
+    background-color: #021331; /* Color de fondo al pasar el ratón */
+    color: #edb135; /* Color del texto al pasar el ratón */
+}
+
+
+/* Fin Historia */
+
+
+/* Img Reserva */
+
+#reservas_seccion {
+    margin-top: 10%; 
+    text-align: center; 
+    margin-bottom: 12%;
+}
+
+#titulo_reservas {
+    font-family: 'Pirata One'; 
+    font-size: 32px;
+    color: #e8b238; 
+    margin-bottom: 20px; 
+}
+
+#lista_reservas {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#lista_reservas li {
+    margin: 0 2%; 
+}
+
+#lista_reservas img {
+    width: 15vw; 
+    height: 15vw;
+    border-radius: 5px; 
+    transition: transform 1s; 
+}
+
+#lista_reservas img:hover {
+    transform: scale(1.1); 
+    cursor: pointer; 
+}
+/* Fin Img Reserva */
+
+/* zona Producto */
+
+#cuadrado2 {                    /* Aprovecho lo de historia */ 
+    background-color: #021331; 
+    width:  70vh;               
+    height: 70vh;              
+    position: absolute;        
+    left: 15vh;               
+    top: -5vh;              
+}
+
+/* Fin zona producto */
+
+/*  Footer */
+
+#footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 5%;
+    font-family: 'Pirata One';
+    margin-top: 10vh;
+    height: 40vh;
+    position: relative;
+    text-align: center;
+}
+
+#titulo_footer {
+    margin-bottom: 7.5vh;
+    font-size: 32px;
+}
+
+#referencias_clientes,
+#contacto,
+#enlaces_interes {
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+}
+
+#referencias_clientes h4,
+#enlaces_interes h4 {
+    margin: 0;
+    padding: 5px 0;
+}
+
+#contacto h4 {
+    margin: 0;
+}
+
+#contacto p {
+    margin-top: 5vh;
+}
+
+#referencias_clientes ul,
+#enlaces_interes ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#referencias_clientes ul li,
+#enlaces_interes ul li {
+    margin-bottom: 5px;
+}
+
+#referencias_clientes ul li a,
+#enlaces_interes ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#referencias_clientes ul li a:hover,
+#enlaces_interes ul li a:hover {
+    color: #e8b238;
+}
+
+
+#copyright {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 0;
+    font-size: 36px;
+    height: 15vh;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Fin Footer */
+
+
+
+
+
+
+/* Pagina Producto */ 
+
+#pagina_producto {
+    background-color: #021331;
+    width: 100%;
+    height: 185vh;
+    padding-top: 10%; 
+}
+
+.productos {
+    margin-bottom: 50px; 
+}
+
+.lista_productos {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding-left: 6%;
+}
+
+.lista_productos li {
+    margin: 0 2%;
+}
+
+.lista_productos img {
+    width: 70%; 
+    height: auto; 
+    border-radius: 5px;
+    object-fit: cover; 
+    transition: transform 1s;
+}
+
+.lista_productos img:hover {
+    transform: scale(1.1);
+}
+
+#productos_titulo, #productos2_titulo, #productos3_titulo {
+    color: #e8b238;
+    font-family: 'Pirata One', sans-serif;
+    font-size: 36px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.promociones {
+    background-color: #021331;
+    padding: 20px; 
+    padding-left: 10%;
+}
+
+#titulo_promociones {
+    color: #e8b238; 
+    font-family: 'Pirata One', sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-right: 10%;
+}
+
+.lista_promociones {
+    display: flex;
+    justify-content: center; 
+    list-style: none;
+    
+}
+
+
+.lista_promociones li {
+    color: #e8b238; 
+    font-family: 'Pirata One', sans-serif;
+    font-size: 24px;
+    
+}
+
+.lista_promociones p {
+    margin: 0 15px; 
+    text-align: center; 
+}
+
+.lista_promociones img {
+    width: 60%;
+    height: auto; 
+    border-radius: 5px;
+    
+}
+
+
+
+/* Fin Pagina Producto */
+
+
+
+
+
+/* Pagina Reserva*/
+
+
+#formulario_reservas {
+    background-color: #021331;
+    padding: 50px 0; 
+    text-align: center;
+    padding-top: 15%;
+}
+
+#titulo_reservas {
+    color: #e8b238;
+    font-family: 'Pirata One', sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px; 
+    text-align: center;
+    line-height: 1.5;
+}
+
+.input_reserva {
+    display: block;
+    width: 60%; 
+    margin: 10px auto; 
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #c4c4c4; 
+    font-size: 16px;
+}
+
+#boton_enviar {
+    display: block;
+    width: 30%; 
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #e8b238;
+    color: #021331; 
+    border: none;
+    border-radius: 25px;
+    font-family: 'Pirata One', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#boton_enviar:hover {
+    background-color: #d9a431; 
+}
+
+/* Fin Pagina Reserva*/
+
+/* Pagina informacion */
+
+#pagina_informacion {
+    background-color: #021331;
+    padding: 20px;
+    text-align: center;
+    padding-top: 10%;
+    height: 200vh;
+}
+
+.info_rectangulo  {
+    background-color: #69a0b4;
+    border-radius: 10px; 
+    padding: 20px;
+    margin: 20px auto; 
+    width: 60%; 
+    color: #fdf9c9;
+    margin-bottom: 10%;
+}
+
+.info_rectangulo h2 {
+    font-family: 'Pirata One', sans-serif;
+    font-size: 36px; 
+    margin-bottom: 10px; 
+}
+
+.info_rectangulo p {
+    font-size: 18px; 
+    color: #ffffff;
+}
+
+.izquierda {
+    float: left;
+    margin-left: 3%;
+    clear: both;
+}
+
+
+.derecha {
+    float: right;
+    margin-right: 3%;
+    clear: both;
+}
+
+
+/* Fin Pagina informacion */
+
